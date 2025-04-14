@@ -1,0 +1,179 @@
+/* resources/css/views/imoveis-create.css */
+
+/* container principal */
+.imovel-create-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* cabeçalho */
+.imovel-create-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.imovel-create-header h1 {
+    color: #2c3e50;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* endereço (logradouro + número) */
+.address-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* formulario */
+.form-group-imovel {
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.form-group-imovel label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #34495e;
+    font-size: 0.95rem;
+}
+
+.form-group-imovel input,
+.form-group-imovel select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f9fafb;
+}
+
+.form-group-imovel input:focus,
+.form-group-imovel select:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    background-color: #ffffff;
+}
+
+/* css para o select de proprietario */
+.proprietario-select select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1em;
+}
+
+/* texto de ajuda */
+.text-muted {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+/* area de botoes */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+/* botoes */
+.btn-submit {
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-submit:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+.btn-cancel {
+    background-color: #ef4444;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.btn-cancel:hover {
+    background-color: #dc2626;
+    transform: translateY(-1px);
+}
+
+/* mensagens de erro */
+.error-message {
+    color: #ef4444;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+/* icones */
+.fas {
+    font-size: 0.9rem;
+}
+
+/* responsividade */
+@media (max-width: 768px) {
+    .imovel-create-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .address-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+        gap: 0.75rem;
+    }
+
+    .btn-submit,
+    .btn-cancel {
+        width: 100%;
+        justify-content: center;
+    }
+}
+/* efeitos de transição para inputs invalidos */
+input:invalid, select:invalid {
+    border-color: #fca5a5;
+}
+
+input:invalid:focus, select:invalid:focus {
+    box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.15);
+}
